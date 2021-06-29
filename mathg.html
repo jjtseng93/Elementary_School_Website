@@ -1,6 +1,6 @@
 
-<HTML><HEAD><TITLE>¼Æ¾Ç¹CÀ¸ºô­¶</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=big5">
+<HTML><HEAD><TITLE>æ•¸å­¸éŠæˆ²ç¶²é </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
 <SCRIPT language=VBScript>
 Sub chan
 If document.frm.txt2.value="/" then
@@ -16,43 +16,43 @@ name=txt2> <OPTION value=+>&nbsp;&nbsp;+&nbsp;&nbsp;<OPTION
   value=->&nbsp;&nbsp;-&nbsp;&nbsp;<OPTION 
   value=*>&nbsp;&nbsp;*&nbsp;&nbsp;<OPTION 
   value=/>&nbsp;&nbsp;/&nbsp;&nbsp;</OPTION></SELECT> <INPUT value=2 name=txt3> 
-</NOBR><BR>= <INPUT name=txt4>¾l¼Æ <INPUT name=txt5><BR><INPUT type=button value=½T©w name=bt1>
+</NOBR><BR>= <INPUT name=txt4>é¤˜æ•¸ <INPUT name=txt5><BR><INPUT type=button value=ç¢ºå®š name=bt1>
 <SCRIPT language=VBScript event=onClick for=bt1>
 Select Case document.frm.txt2.value
 Case "+"
 If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) + CInt(document.frm.txt3.value) Then
-Msgbox "µª¹ï°Õ",0+48,"Good"
+Msgbox "ç­”å°å•¦",0+48,"Good"
 document.frm.txt1.value=CStr(Fix(Rnd*217))
 document.frm.txt3.value=CStr(Fix(Rnd*846))
 Else
-Msgbox "µª¿ù°Õ",0+16,"Bad"
+Msgbox "ç­”éŒ¯å•¦",0+16,"Bad"
 End If
 Case "-"
 If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) - CInt(document.frm.txt3.value) Then
-Msgbox "µª¹ï°Õ",0+48,"Good"
+Msgbox "ç­”å°å•¦",0+48,"Good"
 document.frm.txt1.value=CStr(Fix(Rnd*217))
 document.frm.txt3.value=CStr(Fix(Rnd*846))
 Else
-Msgbox "µª¿ù°Õ",0+16,"Bad"
+Msgbox "ç­”éŒ¯å•¦",0+16,"Bad"
 End If
 Case "*"
 If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) * CInt(document.frm.txt3.value) Then
-Msgbox "µª¹ï°Õ",0+48,"Good"
+Msgbox "ç­”å°å•¦",0+48,"Good"
 document.frm.txt1.value=CStr(Fix(Rnd*217))
 document.frm.txt3.value=CStr(Fix(Rnd*846))
 Else
-Msgbox "µª¿ù°Õ",0+16,"Bad"
+Msgbox "ç­”éŒ¯å•¦",0+16,"Bad"
 End If
 Case "/"
 If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) \ CInt(document.frm.txt3.value) And CInt(document.frm.txt5.value)=CInt(document.frm.txt1.value) Mod CInt(document.frm.txt3.value) Then
-Msgbox "µª¹ï°Õ",0+48,"Good"
+Msgbox "ç­”å°å•¦",0+48,"Good"
 document.frm.txt1.value=CStr(Fix(Rnd*217))
 document.frm.txt3.value=CStr(Fix(Rnd*846))
 Else
-Msgbox "µª¿ù°Õ",0+16,"Bad"
+Msgbox "ç­”éŒ¯å•¦",0+16,"Bad"
 End If
 Case Else
-Msgbox "µL¦¹¹Bºâ²Å¸¹"
+Msgbox "ç„¡æ­¤é‹ç®—ç¬¦è™Ÿ"
 End Select
 </SCRIPT>
 
