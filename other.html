@@ -1,0 +1,53 @@
+
+<HTML><HEAD><TITLE>其他</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=big5">
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY background=nabkgnd.jpg>
+<P align=center><INPUT type=button value=時間 name=bttm></P>
+<SCRIPT language=VBScript>
+Function shtm()
+Dim t
+If t = 0 then
+Window.status=CStr(now())
+settimeout "shtm()",1000
+Else
+Window.status=CStr(now())
+End if
+End Function
+Sub bttm_onClick()
+Call shtm
+End sub
+</SCRIPT>
+
+<P align=center><INPUT type=button value=回新首頁 name=btat></P>
+<SCRIPT language=VBScript event=onClick for=btat>
+location.href="http://jjtseng93.googlepages.com"
+</SCRIPT>
+
+<P align=center><INPUT type=button value=計算機 name=btbt>
+<SCRIPT language=VBScript event=onClick for=btbt>
+Dim a
+Dim b
+Dim c
+Dim d
+a = inputbox("請輸入第一個數")
+b = inputbox("請輸入運算符號(+,-,*,/)")
+c = inputbox("請輸入第二個數")
+Select Case b
+Case "+"
+d=CInt(a)+CInt(c)
+Msgbox "答案是" & d,0+32,"Answer"
+Case "-"
+d=a-c
+Msgbox "答案是" & d,0+32,"Answer"
+Case "*"
+d=a*c
+Msgbox "答案是" & d,0+32,"Answer"
+Case "/"
+d=a/c
+Msgbox "答案是" & d,0+32,"Answer"
+End Select
+</SCRIPT>
+ </P>
+</BODY></HTML>

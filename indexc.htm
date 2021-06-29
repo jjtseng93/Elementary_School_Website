@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://home.kimo.com.tw/jjtseng93/indexc.htm -->
+<HTML><HEAD><TITLE>1</TITLE>
+<META http-equiv=Content-Language content=zh-tw>
+<META http-equiv=Content-Type content="text/html; charset=big5">
+<META content="Microsoft FrontPage 6.0" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<base target="contents">
+</HEAD>
+<BODY background=FLOWER.gif>
+<SCRIPT language=VBScript>
+Sub document_onDblclick
+Dim x : Dim y : Dim msg
+Dim lb
+lb=chr(13)+chr(10)
+     '取得滑鼠座標的 x 軸位置
+     x=window.event.x
+
+     '取得滑鼠座標的 y 軸位置
+     y=window.event.y
+     msg="滑鼠指標目前的位置是 " & lb &_
+     "X= " & x & " Y= " & y
+MsgBox msg,0+32,"滑鼠位置"
+End Sub
+</SCRIPT>
+<!----全兜錄 出現又消失的光 開始---->
+<SCRIPT language=JavaScript>
+<!--
+//設定顏色//
+Clrs=new Array('white','yellow','cyan','red','9900cc','lime','blue','green','00ff00','ffffff','ff00ff','ffa500','fff000','cc6699','white','ccffcc')
+amount=12;
+Xpos = 0;
+Ypos = 0;
+if (document.layers){
+for (i = 0; i < amount; i++)
+{document.write('<layer name=nstrs'+i+' top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>')}
+window.captureEvents(Event.MOUSEMOVE);
+function nsMouse(evnt){
+Xpos = window.pageYOffset+evnt.pageX+1;
+Ypos = window.pageYOffset+evnt.pageY+4;}
+window.onMouseMove = nsMouse;}
+else if (document.all){
+document.write('<div id="ieDiv" style="position:absolute;top:0px;left:0px">'
++'<div id="c" style="position:relative">');
+for (i = 0; i < amount; i++)
+{document.write('<div style="position:absolute;top:0px;left:0px;width:'+i/2+';height:'+i/2+';font-size:'+i/2+'"></div>')}
+document.write('</div></div>');
+function ieMouse(){
+Ypos = document.body.scrollTop+event.y+4;
+Xpos = document.body.scrollLeft+event.x+1;}
+document.onmousemove = ieMouse;}
+
+function animateLogo(){
+if (document.layers){
+for (i = 0; i < amount; i++){
+var randCol=Math.round(Math.random()*8);
+document.layers['nstrs'+i].bgColor=Clrs[randCol];
+
+if (i < amount-1) {
+ document.layers['nstrs'+i].top=document.layers['nstrs'+(i+1)].top;
+ document.layers['nstrs'+i].left=document.layers['nstrs'+(i+1)].left;} 
+else   {
+ document.layers['nstrs'+i].top = Ypos;
+ document.layers['nstrs'+i].left =Xpos;}}}
+else if (document.all){
+for (i = 0; i <  amount; i++){
+var randCol=Math.round(Math.random()*8);
+ieDiv.all.c.all[i].style.background=Clrs[randCol]; 
+if (i < amount-1) {
+ ieDiv.all.c.all[i].style.top=ieDiv.all.c.all[i+1].style.top;
+ ieDiv.all.c.all[i].style.left=ieDiv.all.c.all[i+1].style.left;} 
+else {
+ ieDiv.all.c.all[i].style.top = Ypos;
+ ieDiv.all.c.all[i].style.left =Xpos;}}}
+setTimeout("animateLogo()",100);}
+animateLogo();
+//-->
+</SCRIPT>
+
+<H1 align=center><FONT color=#0000ff>My homepage</FONT></H1>
+
+</BODY></HTML>

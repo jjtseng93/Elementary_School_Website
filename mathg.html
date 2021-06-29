@@ -1,0 +1,59 @@
+
+<HTML><HEAD><TITLE>數學遊戲網頁</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=big5">
+<SCRIPT language=VBScript>
+Sub chan
+If document.frm.txt2.value="/" then
+document.frm.txt5.style.visibility=1
+End if
+End sub
+</SCRIPT>
+
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY background=SNOW.gif>
+<FORM name=frm><NOBR><INPUT value=888 name=txt1> <SELECT multiple size=4 
+name=txt2> <OPTION value=+>&nbsp;&nbsp;+&nbsp;&nbsp;<OPTION 
+  value=->&nbsp;&nbsp;-&nbsp;&nbsp;<OPTION 
+  value=*>&nbsp;&nbsp;*&nbsp;&nbsp;<OPTION 
+  value=/>&nbsp;&nbsp;/&nbsp;&nbsp;</OPTION></SELECT> <INPUT value=2 name=txt3> 
+</NOBR><BR>= <INPUT name=txt4>餘數 <INPUT name=txt5><BR><INPUT type=button value=確定 name=bt1>
+<SCRIPT language=VBScript event=onClick for=bt1>
+Select Case document.frm.txt2.value
+Case "+"
+If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) + CInt(document.frm.txt3.value) Then
+Msgbox "答對啦",0+48,"Good"
+document.frm.txt1.value=CStr(Fix(Rnd*217))
+document.frm.txt3.value=CStr(Fix(Rnd*846))
+Else
+Msgbox "答錯啦",0+16,"Bad"
+End If
+Case "-"
+If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) - CInt(document.frm.txt3.value) Then
+Msgbox "答對啦",0+48,"Good"
+document.frm.txt1.value=CStr(Fix(Rnd*217))
+document.frm.txt3.value=CStr(Fix(Rnd*846))
+Else
+Msgbox "答錯啦",0+16,"Bad"
+End If
+Case "*"
+If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) * CInt(document.frm.txt3.value) Then
+Msgbox "答對啦",0+48,"Good"
+document.frm.txt1.value=CStr(Fix(Rnd*217))
+document.frm.txt3.value=CStr(Fix(Rnd*846))
+Else
+Msgbox "答錯啦",0+16,"Bad"
+End If
+Case "/"
+If CInt(document.frm.txt4.value)=CInt(document.frm.txt1.value) \ CInt(document.frm.txt3.value) And CInt(document.frm.txt5.value)=CInt(document.frm.txt1.value) Mod CInt(document.frm.txt3.value) Then
+Msgbox "答對啦",0+48,"Good"
+document.frm.txt1.value=CStr(Fix(Rnd*217))
+document.frm.txt3.value=CStr(Fix(Rnd*846))
+Else
+Msgbox "答錯啦",0+16,"Bad"
+End If
+Case Else
+Msgbox "無此運算符號"
+End Select
+</SCRIPT>
+
+ </FORM></BODY></HTML>
