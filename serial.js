@@ -32,7 +32,7 @@ var serial = {};
 
   serial.Port = function(device) {
     this.device_ = device;
-    this.interfaceNumber_ = 2;  // original interface number of WebUSB Arduino demo
+    this.interfaceNumber_ = 0;  // original interface number of WebUSB Arduino demo
     this.endpointIn_ = 5;       // original in endpoint ID of WebUSB Arduino demo
     this.endpointOut_ = 4;      // original out endpoint ID of WebUSB Arduino demo
   };
