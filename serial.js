@@ -71,7 +71,10 @@ var serial = {};
             })
           })
         })
-        .then(() => this.device_.claimInterface(this.interfaceNumber_))
+        .then(() => {
+                      console.log(this.interfaceNumber_);
+                      return this.device_.claimInterface(this.interfaceNumber_);
+                    })
         .then(() => this.device_.selectAlternateInterface(this.interfaceNumber_, 0))
         // The vendor-specific interface provided by a device using this
         // Arduino library is a copy of the normal Arduino USB CDC-ACM
